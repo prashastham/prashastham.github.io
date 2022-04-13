@@ -2,6 +2,10 @@ import './style.css'
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import background_jpg from './background.jpg';
+import prashastha_jpg from './prashastha.jpg';
+import nebula_jpg from './nebula.jpg';
+import monkey_model_json from './monkey_model.json';
 
 const scene = new THREE.Scene();
 
@@ -38,7 +42,7 @@ function addMonkey(){
     //Loading custom geometry
     const loader = new THREE.BufferGeometryLoader();
     loader.load(
-        './monkey_model.json',
+        monkey_model_json,
         // onLoad callback
         function ( geometry ) {
             const material = new THREE.MeshNormalMaterial();
@@ -59,11 +63,11 @@ function addMonkey(){
 Array(100).fill().forEach(addMonkey);
 
 //Adding background
-const comicTexture = new THREE.TextureLoader().load('./background.jpg');
+const comicTexture = new THREE.TextureLoader().load(background_jpg);
 scene.background = comicTexture;
 
 //Adding avatar
-const avatarTexture = new THREE.TextureLoader().load('./prashastha.jpg');
+const avatarTexture = new THREE.TextureLoader().load(prashastha_jpg);
 const avatar = new THREE.Mesh(
     new THREE.BoxGeometry(10, 10, 10),
     new THREE.MeshBasicMaterial({map:avatarTexture})
@@ -71,7 +75,7 @@ const avatar = new THREE.Mesh(
 scene.add(avatar);
 
 //Adding sphere
-const nebulaTexture = new THREE.TextureLoader().load('./nebula.jpg');
+const nebulaTexture = new THREE.TextureLoader().load(nebula_jpg);
 const nebula = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
     new THREE.MeshStandardMaterial({map:nebulaTexture})
