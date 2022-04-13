@@ -38,7 +38,7 @@ function addMonkey(){
     //Loading custom geometry
     const loader = new THREE.BufferGeometryLoader();
     loader.load(
-        'monkey_model.json',
+        './monkey_model.json',
         // onLoad callback
         function ( geometry ) {
             const material = new THREE.MeshNormalMaterial();
@@ -59,11 +59,11 @@ function addMonkey(){
 Array(100).fill().forEach(addMonkey);
 
 //Adding background
-const comicTexture = new THREE.TextureLoader().load('background.jpg');
+const comicTexture = new THREE.TextureLoader().load('./background.jpg');
 scene.background = comicTexture;
 
 //Adding avatar
-const avatarTexture = new THREE.TextureLoader().load('prashastha.jpg');
+const avatarTexture = new THREE.TextureLoader().load('./prashastha.jpg');
 const avatar = new THREE.Mesh(
     new THREE.BoxGeometry(10, 10, 10),
     new THREE.MeshBasicMaterial({map:avatarTexture})
@@ -71,7 +71,7 @@ const avatar = new THREE.Mesh(
 scene.add(avatar);
 
 //Adding sphere
-const nebulaTexture = new THREE.TextureLoader().load('nebula.jpg');
+const nebulaTexture = new THREE.TextureLoader().load('./nebula.jpg');
 const nebula = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
     new THREE.MeshStandardMaterial({map:nebulaTexture})
