@@ -5,7 +5,6 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import background_jpg from './background.jpg';
 import prashastha_jpg from './prashastha.jpg';
 import nebula_jpg from './nebula.jpg';
-import monkey_model_json from './monkey_model.json';
 
 const scene = new THREE.Scene();
 
@@ -42,7 +41,7 @@ function addMonkey(){
     //Loading custom geometry
     const loader = new THREE.BufferGeometryLoader();
     loader.load(
-        monkey_model_json,
+        "./monkey_model.json",
         // onLoad callback
         function ( geometry ) {
             const material = new THREE.MeshNormalMaterial();
