@@ -29,14 +29,14 @@ export const Navigation: React.FC = () => {
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
-							href="/projects"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
+							href="/blog"
+							className="duration-200 text-xl font-extrabold text-slate-800 hover:text-zinc-100"
 						>
-							Projects
+							Blog
 						</Link>
 						<Link
-							href="/contact"
-							className="duration-200 text-zinc-400 hover:text-zinc-100"
+							href="https://highbrow-ai.vercel.app/"
+							className="duration-200 text-xl font-extrabold text-slate-800 hover:text-zinc-100"
 						>
 							Contact
 						</Link>
@@ -44,9 +44,9 @@ export const Navigation: React.FC = () => {
 
 					<Link
 						href="/"
-						className="duration-200 text-zinc-300 hover:text-zinc-100"
+						className="duration-200 text-slate-800 hover:text-zinc-100"
 					>
-						<ArrowLeft className="w-6 h-6 " />
+						<ArrowLeft className="w-8 h-8 " />
 					</Link>
 				</div>
 			</div>

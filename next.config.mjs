@@ -1,11 +1,8 @@
-import { withContentlayer } from "next-contentlayer";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-	experimental: {
-		mdxRs: true,
-	},
+	output: "export",  // <=== enables static exports
+  	reactStrictMode: true,
 };
 
-export default withContentlayer(nextConfig);
+export default nextConfig;
