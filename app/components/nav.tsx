@@ -29,16 +29,16 @@ export const Navigation: React.FC = () => {
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
-							href="/blog"
-							className="duration-200 text-xl font-extrabold text-slate-800 hover:text-zinc-100"
-						>
-							Blog
-						</Link>
-						<Link
 							href="https://highbrow-ai.vercel.app/"
 							className="duration-200 text-xl font-extrabold text-slate-800 hover:text-zinc-100"
 						>
-							Contact
+							Blog 📄
+						</Link>
+						<Link
+							href="/contact"
+							className="duration-200 text-xl font-extrabold text-slate-800 hover:text-zinc-100"
+						>
+							Contact 💬
 						</Link>
 					</div>
 
