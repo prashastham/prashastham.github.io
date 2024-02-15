@@ -13,7 +13,7 @@ import Springs from "./components/springs";
 
 const navigation = [
   { name: "Blog 📄", href: "/blog" },
-  { name: "Contact 🤝🏽", href: "https://highbrow-ai.vercel.app/" },
+  { name: "Contact 💬", href: "https://highbrow-ai.vercel.app/" },
 ];
 
 const springCount: number = 50;
